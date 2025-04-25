@@ -40,6 +40,10 @@ if method == "html.datasortbody":
         ],
     )
     # print(stmt_payment_list)
+    stmt_payment_list.to_csv(
+        path_or_buf=FILE_PATH.replace(".html", ".csv"), index=False
+    )
+
 
 elif method == "html.document":
     from bs4 import BeautifulSoup
